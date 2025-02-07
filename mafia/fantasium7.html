@@ -1,0 +1,2265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-02-07 Fri 09:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style>a { color: black; }</style>
+<style>body { max-width: 800px; margin: auto; }</style>
+<style>
+body { background-color: #FFF; }
+.outline-3, .outline-4, .outline-5, .outline-6 {
+background-color: #F2F1F0;
+padding: 10px;
+margin: 20px 0; /* Increased margin for separation */
+border-radius: 5px;
+border: 1px dashed lightgray;
+}
+</style>
+<style>
+table {
+border-collapse: collapse;
+width: 100%;
+margin: 20px 0;
+}
+th, td {
+border: 1px solid #333;
+padding: 8px;
+text-align: left;
+}
+</style>
+<style>
+blockquote {
+background-color: #f9f9f9; /* Light gray background */
+border-left: 5px solid #ccc; /* Left border */
+margin: 20px 0; /* Spacing around the blockquote */
+padding: 15px 20px; /* Padding inside the blockquote */
+font-style: italic; /* Italic text */
+color: #555; /* Slightly darker text color */
+quotes: "“" "”" "‘" "’"; /* Fancy quotes */
+}
+blockquote::before {
+content: open-quote; /* Open quote before the text */
+font-size: 2em; /* Larger quote symbol */
+color: #ccc; /* Light gray quote symbol */
+line-height: 0.1em; /* Adjust vertical alignment */
+margin-right: 0.25em; /* Spacing between quote and text */
+vertical-align: -0.4em; /* Align quote with text */
+}
+blockquote::after {
+content: close-quote; /* Close quote after the text */
+font-size: 2em; /* Larger quote symbol */
+color: #ccc; /* Light gray quote symbol */
+line-height: 0.1em; /* Adjust vertical alignment */
+margin-left: 0.25em; /* Spacing between text and quote */
+vertical-align: -0.4em; /* Align quote with text */
+}
+blockquote p {
+margin: 0; /* Remove default paragraph margins */
+}
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9d7bc9c">Персонажи</a>
+<ul>
+<li><a href="#orgd621e64">Мафия – Mr Fiks – Гусли Садко из “Садко”</a></li>
+<li><a href="#org1677a7e">Мафия – Nekr0 – Ай Хосино из “Oshi no Ko”</a></li>
+<li><a href="#org625018d">Предатель – VanSLis – Накимэ из “Kimetsu no Yaiba”</a></li>
+<li><a href="#org0c5e2b9">Якудза – Destiny – Скотт Пилгрим из Scott Pilgrim vs The World</a></li>
+<li><a href="#org1d98bf3">Якудза – Siiiiid1 – Финеас из “Финеас и Ферб”</a></li>
+<li><a href="#org0f3f967">Якудза – Ingeroid – Жена конюха из “Ели мясо мужики”</a></li>
+<li><a href="#org8445b60">Закон – Джакка – Сцилла из “Hades”</a></li>
+<li><a href="#orgc309f8f">Закон – Shy – Хацунэ Мику из “Vocaloid”</a></li>
+<li><a href="#orgc8580d6">Закон – ISOLE – Ферб из “Финеас из Ферб”</a></li>
+<li><a href="#org2daf5cb">Закон – Nikita101889  – Трубадур из “Бременских музыкантов”</a></li>
+<li><a href="#orgfeebaf4">Закон – Cvi_ – Germaine van der Wijk из “Disco Elysium”</a></li>
+<li><a href="#org564f547">Закон – Cornix – Орфей из “Hades”</a></li>
+<li><a href="#org61d66f0">Закон – Psychotic – Какофоникс из “Asterix”</a></li>
+<li><a href="#orge0c64aa">Закон – vizion – Noise Marine из “Warhammer 40000”</a></li>
+<li><a href="#orgb5640d0">Нейтрал – Alaron – Джонни Сильверхэнд из “Cyberpunk 2077”</a></li>
+</ul>
+</li>
+<li><a href="#org3d192c3">Ход игры</a>
+<ul>
+<li><a href="#orgd81d55b">День 1</a></li>
+<li><a href="#orgd8d5cf5">Ночь 1</a></li>
+<li><a href="#org9221b9c">День 2</a></li>
+<li><a href="#orgb22a5cb">Ночь 2</a></li>
+<li><a href="#org3fc4a6e">День 3</a></li>
+<li><a href="#orge347198">Ночь 3</a></li>
+<li><a href="#orgc0a5955">День 3</a></li>
+<li><a href="#org54c0934">Ночь 3</a></li>
+</ul>
+</li>
+<li><a href="#org3ff0f98">Итоги</a>
+<ul>
+<li><a href="#org4d570a5">Ачивки</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9d7bc9c" class="outline-2">
+<h2 id="org9d7bc9c">Персонажи</h2>
+<div class="outline-text-2" id="text-org9d7bc9c">
+</div>
+<div id="outline-container-orgd621e64" class="outline-3">
+<h3 id="orgd621e64">Мафия – Mr Fiks – Гусли Садко из “Садко”</h3>
+<div class="outline-text-3" id="text-orgd621e64">
+
+<div id="orgbd82440" class="figure">
+<p><img src="Players/2025-01-28_21-48-15_screenshot.png" alt="2025-01-28_21-48-15_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Пустить в пляс</i> (Контроль) – ночью выберите цель и назовите любые два цвета. Заведомо, если цель в следующую ночь играет способности любого из этих цветов, то блокируется. Нельзя повторять названные цвета при повторных применениях на одну и ту же цель. Эту способность нельзя заблокировать.
+</p>
+
+<p>
+<i>Морской царь</i> (Агрессия) – если в две прошлые ночи вы использовали <i>Пустить в пляс</i> на одну и ту же цель, в эту можете вызвать потоп. Тогда все атаки в эту ночь игнорируют одну защиту или блокировку. Можете выбрать цель, кроме персонажа, о котором идет речь, тогда Аккорд (Агрессия, Агрессия, Агрессия) – также атакуйте цель.
+</p>
+
+<p>
+<i>Игра на пиру</i> (Хаос) – ночью, вдобавок к другим способностям, можете выбрать любые цвета (минимум 1). Эта способность имеет именно выбранные цвета с точки зрения Аккорда, Соло и Серенады. Можно применять один раз за игру. Перезаряжается, если умирает член Мафии.
+</p>
+
+<p>
+<i>Биться от заклад</i> (Информация) – днем можете выбрать цель и приказать ей в следующую ночь применить способность на выбранного вами персонажа. Если цель не выполнила приказ, вы узнаете об этом, и на следующую ночь ваше <i>Убийство</i> в ее сторону игнорирует защиту и блокировки. Цель узнает суть приказа, но не последствия за невыполнение. Нельзя применить дважды на одну и ту же цель.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1677a7e" class="outline-3">
+<h3 id="org1677a7e">Мафия – Nekr0 – Ай Хосино из “Oshi no Ko”</h3>
+<div class="outline-text-3" id="text-org1677a7e">
+
+<div id="orgbee7a84" class="figure">
+<p><img src="Players/ai-hoshino.png" alt="ai-hoshino.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Фандом</i> (Информация) – каждую фазу можете создать или пересоздать чат Фандома с вами и любыми 3-6 персонажами. Ваша личина с точки зрения способностей членов Фандома – Закон. Атаки от членов Фандома в вашу сторону игнорируют защиты и не могут быть заблокированы.
+</p>
+
+<p>
+<i>Любовь?</i> (Информация) – ночью можете выбрать цель. Если личина цели – Предатель, вы узнаете об этом. Нельзя применять на одну цель две ночи подряд. Серенада (Информация) – цель игнорирует одну атаку по себе.
+</p>
+
+<p>
+<i>Любовь!</i> (Контроль) – ночью можете выбрать цель из Фандома. Ее способность Серенады в вашу сторону срабатывает вне зависимости от ее цвета. Серенада (Агрессия) – атакуйте цель.
+</p>
+
+<p>
+<i>В свете софитов</i> (Контроль) – один раз за игру днем в любой момент можете публично и однозначно объявить, что применяете способность и являетесь Мафией. Мастер подтвердит справедливость утверждения. В этот день голосования за казнь заведомо не происходит.
+</p>
+
+<p>
+<i>STAR☆T☆RAIN</i> (Агрессия) – ночью можете выбрать цель. Соло – атакуйте ее. Нельзя применять дважды на одну и ту же цель; перезаряжается, если умирает член Мафии.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org625018d" class="outline-3">
+<h3 id="org625018d">Предатель – VanSLis – Накимэ из “Kimetsu no Yaiba”</h3>
+<div class="outline-text-3" id="text-org625018d">
+
+<div id="orge68d59f" class="figure">
+<p><img src="Players/2025-01-28_21-50-43_screenshot.png" alt="2025-01-28_21-50-43_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Замок бесконечности</i> (Защита, пассивно) – способности, которые вы применяете на персонажей, состоящих с вами в одном чате, не могут быть заблокированы. Вы защищены от атак персонажей, состоящих с вами в одном чате.
+</p>
+
+<p>
+<i>Портал</i> (Информация) – ночью можете выбрать цель. Добавьте себя во все чаты, в которых состоит цель, кроме чата Кейкаку. Если вы добавились таким образом в чат Заговора, его члены узнают, что вы Предатель, и чат не пересоздается.
+</p>
+
+<p>
+<i>Глаза-миньоны</i> (Информация) – ночью можете выбрать цель и узнать ее Личину. Аккорд (Защита, Защита, Агрессия) – узнайте, способности какого цвета и на кого применяла цель. Серенада (Контроль) – атакуйте цель. Серенада (Информация) – заблокируйте цель. Нельзя применять на одну цель дважды.
+</p>
+
+<p>
+<i>Раздавить стенами</i> (Агрессия) – ночью, вдобавок к другим способностям, если оба ваших партнера по Мафии мертвы, атакуйте персонажа, с которым состоите в одном чате.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c5e2b9" class="outline-3">
+<h3 id="org0c5e2b9">Якудза – Destiny – Скотт Пилгрим из Scott Pilgrim vs The World</h3>
+<div class="outline-text-3" id="text-org0c5e2b9">
+
+<div id="org67982de" class="figure">
+<p><img src="Players/2025-01-28_21-45-29_screenshot.png" alt="2025-01-28_21-45-29_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Battle of the Bands</i> (Агрессия) – днем можете выбрать цель. Цель узнает, что ее “вызвали на дуэль”. Нельзя использовать повторно, пока не перезарядится или цель не умрет. Можете также прислать цели произвольное сообщение.
+</p>
+
+<p>
+<i>Очная ставка</i> (Агрессия) – ночью выберите из следуюших движений четыре; целью этой способности считается последний вызванный на дуэль. Узнайте, какие из них сработали. Если сработали хотя бы два, атакуйте цель, и <i>Battle of the Bands</i> перезаряжается. Если сработали хотя бы три, заблокируйте цель. Если сработали все четыре, цель нельзя защитить и эту способность нельзя заблокировать.
+</p>
+
+<ul class="org-ul">
+<li>Серенада (Агрессия)</li>
+<li>Серенада (Защита)</li>
+<li>Серенада (Информация)</li>
+<li>Серенада (Контроль)</li>
+<li>Аккорд (Информация, Информация, Информация, Информация)</li>
+<li>Аккорд (Защита, Защита, Защита, Защита)</li>
+<li>Аккорд (Агрессия, Агрессия, Агрессия, Агрессия)</li>
+<li>Аккорд (Контроль, Контроль, Контроль, Контроль)</li>
+<li>Аккорд (Агрессия, Информация, Контроль, Защита)</li>
+<li>Аккорд (Контроль, Контроль, Защита, Защита)</li>
+<li>Аккорд (Агрессия, Хаос)</li>
+<li>Соло</li>
+<li>Цель заблокирована в эту ночь кем-то, кроме вас</li>
+<li>Личина цели – Мафия</li>
+</ul>
+
+<p>
+<i>1-up</i> (Защита, пассивно) – один раз за игру, если по итогам ночи вы умираете, вы вместо этого заведомо выживаете.
+</p>
+
+<p>
+<i>vs. The World</i> (Хаос) – если <i>Battle of the Bands</i> перезарядился хотя бы семь раз, ночью вдобавок к любой другой способности можете атаковать цель, игнорируя защиты.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d98bf3" class="outline-3">
+<h3 id="org1d98bf3">Якудза – Siiiiid1 – Финеас из “Финеас и Ферб”</h3>
+<div class="outline-text-3" id="text-org1d98bf3">
+<p>
+<b>Финеас из "Финеас и Ферб"</b>
+</p>
+
+
+<div id="orgf2fc6b6" class="figure">
+<p><img src="Players/2025-01-28_21-55-56_screenshot.png" alt="2025-01-28_21-55-56_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Большая Идея</i> (Хаос) – днем выберите любое количество любых цветов способностей, кроме Хаоса, как минимум два. Следующей ночью можете применить способность номером не больше, чем количество выбранных цветов. Способность срабатывает, только если срабатывает Аккорд на выбранные цвета. Нельзя применять одну и ту же способность две ночи подряд.
+</p>
+
+<p>
+2: <i>Гигантское бомбоубежище</i> (Защита) – защитите всех членов Якудзы от одной атаки в эту ночь.
+</p>
+
+<p>
+3: <i>Переусложненный план мести</i> (Агрессия) – если вы единственная живая Якудза, атакуйте цель.
+</p>
+
+<p>
+4: <i>Тайное общество</i> (Информация) – создайте чат-комнату с любыми персонажами и названием по желанию, или уничтожьте любую ранее так созданную.
+</p>
+
+<p>
+5: <i>Внеочередной выходной</i> (Контроль) – заблокируйте две цели.
+</p>
+
+<p>
+6: <i>Конкурс схваток на катанах</i> (Агрессия) – атакуйте цель.
+</p>
+
+<p>
+7: <i>Ассассин из даркнета</i> (Агрессия) – заблокируйте и атакуйте цель.
+</p>
+
+<p>
+8: <i>Теракт</i> (Агрессия) – атакуйте две цели. Серенада (Защита) – также заблокируйте.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f3f967" class="outline-3">
+<h3 id="org0f3f967">Якудза – Ingeroid – Жена конюха из “Ели мясо мужики”</h3>
+<div class="outline-text-3" id="text-org0f3f967">
+
+<div id="org23d47fc" class="figure">
+<p><img src="Players/2025-01-28_22-00-31_screenshot.png" alt="2025-01-28_22-00-31_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+
+<p>
+<i>С бабою встречались</i> (Контроль) – ночью можете выбрать до трех целей. Заблокируйте тех из них, кто применял способность на вас, узнайте их, вы больше не можете применять эту способность на них, и они узнают "Вас пометила Якудза".
+</p>
+
+<p>
+<i>Не уследил</i> (Защита) – днем можете выбрать цель. В следующую ночь Серенада (Информация) – заблокируйте ее. Нельзя применять на одну и ту же цель дважды.
+</p>
+
+<p>
+<i>Они не понимали</i> (Информация) – днем можете выбрать цель; тогда следующие сутки она не может писать в чат-комнаты. Она и члены чат-комнат, в которых она состоит, знают об этом. Нельзя применять дважды на одну цель.
+</p>
+
+<p>
+<i>Правда, вкусная она?</i> (Агрессия, пассивно) – если вы умерли по итогам ночи и не были в нее заблокированы, то все, ранее показавшиеся на способности <i>С бабою встречались</i>, также умирают. Если наутро живых не осталось, выигрывает Якудза.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8445b60" class="outline-3">
+<h3 id="org8445b60">Закон – Джакка – Сцилла из “Hades”</h3>
+<div class="outline-text-3" id="text-org8445b60">
+
+<div id="org383be98" class="figure">
+<p><img src="Players/2025-01-28_22-01-57_screenshot.png" alt="2025-01-28_22-01-57_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Хор сирен</i> (Информация) – днем, вдобавок к другим способностям, можете добавить до двух целей к себе в чат Хора или удалить из него. Нельзя добавлять членов в чат Хора, если там больше пяти членов.
+</p>
+
+<p>
+<i>Репетиция</i> (Контроль) – ночью, но не две подряд, можете применить эту способность вдобавок к другим. Тогда способности членов Хора не влияют на Аккорд, Серенаду и Соло не-членов Хора, и наоборот.
+</p>
+
+<p>
+<i>Дирижер</i> (Контроль) - днем можете применить одну из следующих способностей, влияющих на всех членов Хора. Нельзя применить одну и ту же способность два дня подряд. Не срабатывает, если в следующую ночь в чате Хора нет как минимум трех членов.
+</p>
+<ul class="org-ul">
+<li>Темп – в следующую ночь члены Хора заведомо могут применить дополнительную способность</li>
+<li>Ритм - в следующую ночь члены Хора не могут быть заблокированы</li>
+<li>Крещендо - в следующую ночь члены Хора заведомо могут применить дополнительную способность “Атака по площади (Агрессия) – если все члены Хора применили эту способность на одну и ту же цель, атакуйте ее”</li>
+<li>Диминуэндо – в следующую ночь члены Хора имеют “Аккорд (Информация, Агрессия, Контроль, Защита) - игнорируйте одну атаку по себе”</li>
+</ul>
+
+<p>
+<i>Ближняя атака</i> (Агрессия) – один раз за игру ночью можете атаковать цель, не находящуюся в чате Хора.
+</p>
+
+<p>
+<i>Закрытая ракушка</i> (Защита) – один раз за игру ночью можете защититься от одной атаки.
+</p>
+
+<p>
+<i>Микрофон</i> (Информация) – ночью можете отправить произвольное сообщение цели.
+q
+</p>
+</div>
+</div>
+<div id="outline-container-orgc309f8f" class="outline-3">
+<h3 id="orgc309f8f">Закон – Shy – Хацунэ Мику из “Vocaloid”</h3>
+<div class="outline-text-3" id="text-orgc309f8f">
+
+<div id="org15ce413" class="figure">
+<p><img src="Players/2025-01-28_22-03-29_screenshot.png" alt="2025-01-28_22-03-29_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Project DIVA</i> (Хаос, пассивно) - каждый день вы должны выбрать количество нот, от 2 до 5.
+</p>
+<ul class="org-ul">
+<li>В следующую ночь вы должны сыграть ровно столько разных нот (x△○︎□→←↑↓), в определенном порядке.</li>
+<li>Каждая нота заведомо считается сыгранной вовремя или невовремя.</li>
+<li>Заблокированные ноты считаются сыгранными невовремя.</li>
+<li>В остальных случаях, у каждой ноты есть свои критерии "вовремя".</li>
+</ul>
+
+<p>
+x (Агрессия) - выберите цель; если цель играет способность, кроме Убийства, на вас, атакуйте ее, и эта нота сыграна вовремя. Серенада (Информация) – защитите цель от одной атаки по себе.
+</p>
+
+<p>
+○︎ (Защита) - выберите цель; защитите ее от одной атаки. Нельзя играть на одну цель две ночи подряд. Вовремя, если вы раньше не играли эту способность на эту цель. Соло - защитите цель от всех атак, и она не может быть заблокирована.
+</p>
+
+<p>
+□ (Информация) - выберите цель и отправьте ей анонимное сообщение. Вовремя, если цель состоит хотя бы в одном чате. Аккорд (Информация, Информация, Контроль, Контроль, Защита) – узнайте личину цели.
+</p>
+
+<p>
+△ (Контроль) - выберите цель и цвет. Нельзя применять на одну и ту же цель дважды. Серенада ([выбранный цвет]) – заблокируйте цель, и эта нота сыграна вовремя.
+</p>
+
+<p>
+→ (Агрессия) - соседние с этой ноты имеют цвет Агрессии, вместо настоящего. Вовремя, если был активирован хотя бы один Аккорд, использующий цвет Агрессии.
+</p>
+
+<p>
+← (Информация) - эта и соседние с этой ноты в эту ночь не учитываются для чужих Соло, Серенад и Аккордов. Вовремя, если это на самом деле повлияло на активацию чьего-то Соло, Серенады или Аккорда.
+</p>
+
+<p>
+↑ (Защита) - эта и соседние с этой ноты не могут быть заблокированы. Вовремя, если кто-то пытался вас заблокировать.
+</p>
+
+<p>
+↓ (Контроль) - соседние с этой ноты учитываются трижды с точки зрения чужих Аккордов. Вовремя, если из-за этого активировался чей-то Аккорд.
+</p>
+
+<p>
+<i>Комбо</i> (Защита, пассивно) – если вы сыграли все ноты вовремя, в следующую ночь вы не можете быть заблокированы.
+</p>
+
+<p>
+<i>Счет</i> (Хаос, пассивно) – по итогам каждой ночи вы узнаете, какой процент всех сыгранных вами нот был вовремя. В конце игры, если ваш счет меньше 60%, вы проигрываете, даже если Закон победил. Способность работает после смерти.
+</p>
+
+<p>
+<i>Исчезновение Хацунэ Мику</i> (Хаос) - днем, не раньше третьего, можете умереть (сохранив счет).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8580d6" class="outline-3">
+<h3 id="orgc8580d6">Закон – ISOLE – Ферб из “Финеас из Ферб”</h3>
+<div class="outline-text-3" id="text-orgc8580d6">
+
+<div id="orgf99a0fa" class="figure">
+<p><img src="Players/2025-01-28_22-04-40_screenshot.png" alt="2025-01-28_22-04-40_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Большая Идея</i> (Хаос) – днем выберите любое количество любых цветов способностей, кроме Хаоса, как минимум два. Следующей ночью можете применить способность номером не больше, чем количество выбранных цветов. Способность срабатывает, только если срабатывает Аккорд на выбранные цвета. Нельзя применять одну и ту же способность две ночи подряд.
+</p>
+
+<p>
+2: <i>Рекреация брони Галлов эпохи Цезаря</i> (Защита) – защититесь от одной атаки по себе
+</p>
+
+<p>
+3: <i>Бомбоубежище на случай ядерной войны</i> (Защита) – защитите цель от одной атаки
+</p>
+
+<p>
+4: <i>Частное детективное агентство</i> (Информация) – узнайте личину цели
+</p>
+
+<p>
+5: <i>Лоббирование мэрии на предмет закрытого ношения</i> (Агрессия) – атакуйте цель
+</p>
+
+<p>
+6: <i>Внеплановый отпуск на круизном лайнере</i> (Контроль) – заблокируйте две цели
+</p>
+
+<p>
+7: <i>Досье на каждого жителя города</i> (Информация) – узнайте личину цели и, если она не Закон, заблокируйте ее
+</p>
+
+<p>
+8: <i>Организация народного ополчения</i> (Агрессия) – если личина цели не Закон, атакуйте цель
+</p>
+</div>
+</div>
+<div id="outline-container-org2daf5cb" class="outline-3">
+<h3 id="org2daf5cb">Закон – Nikita101889  – Трубадур из “Бременских музыкантов”</h3>
+<div class="outline-text-3" id="text-org2daf5cb">
+
+<div id="org9697e6e" class="figure">
+<p><img src="Players/2025-01-28_22-05-58_screenshot.png" alt="2025-01-28_22-05-58_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Хижина разбойников</i> (Информация) – один раз за игру днем выберите чат Заговора или Кейкаку. Его члены узнают об этом и узнают текст этой способности. Следующим утром узнайте текст, но не отправителей, всех сообщений, отправленных в тот чат следующей ночью.
+</p>
+
+<p>
+<i>Переодеться в разбойника</i> (Защита) – ночью, но не две подряд, выберите личину, кроме Закона. Ваша личина совпадает с выбранной, и вы защищены от всех атак персонажей с этой личиной.
+</p>
+
+<p>
+<i>Похищение</i> (Контроль) – ночью, но не две подряд, можете заблокировать и защитить от всех атак одну цель. Аккорд (Контроль, Контроль, Контроль, Контроль) – также узнайте ее личину; если этот Аккорд не сработал, то вы узнаете “Мафия”.
+</p>
+
+<p>
+<i>Имитация драки</i> (Агрессия) – ночью можете выбрать цель; атакуйте ее и защитите от одной атаки.
+</p>
+
+<p>
+<i>Песня о любви</i> (Информация) – ночью, но не две подряд, можете выбрать цель. Серенада (Агрессия) – заблокируйте ее. Серенада (Контроль) – атакуйте ее. Серенада (Информация) – защитите ее от одной атаки. Серенада (Защита) – узнайте ее личину.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfeebaf4" class="outline-3">
+<h3 id="orgfeebaf4">Закон – Cvi_ – Germaine van der Wijk из “Disco Elysium”</h3>
+<div class="outline-text-3" id="text-orgfeebaf4">
+
+<div id="orgbcf24ff" class="figure">
+<p><img src="Players/2025-01-28_22-06-49_screenshot.png" alt="2025-01-28_22-06-49_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>DJ</i> (Хаос, пассивно) – применяя любую способность, сами решайте, какой у нее будет один цвет.
+</p>
+
+<p>
+<i>TURN UP THE VOLUME!</i> (???) – один раз за игру днем, кроме первого, можете применить эту способность; тогда в следующую ночь всем заведомо можно общаться в публичной ветке и только там.
+</p>
+
+<p>
+<i>NOT LOUD ENOUGH!</i> (???) – ночью, но не две подряд, можете атаковать всех, кто уже получил хотя бы одну атаку в эту ночь.
+</p>
+
+<p>
+<i>WE DANCE! (???)</i> – ночью можете выбрать цель; ее Аккорды в эту ночь автоматически срабатывают. Нельзя применять дважды на одну цель.
+</p>
+
+<p>
+<i>I AM THE MIC ENFORCER!</i> (???) – ночью можете выбрать цель. Серенада ([цвет этой способности]) – заблокируйте цель. Нельзя применять дважды на одну цель.
+</p>
+
+<p>
+<i>I AM THE REARRANGER!</i> (???) – ночью можете выбрать две цели. Если они обе пытаются атаковать вас в эту ночь, то вместо этого они атакуют друг друга.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org564f547" class="outline-3">
+<h3 id="org564f547">Закон – Cornix – Орфей из “Hades”</h3>
+<div class="outline-text-3" id="text-org564f547">
+
+<div id="org9525294" class="figure">
+<p><img src="Players/2025-01-28_22-07-52_screenshot.png" alt="2025-01-28_22-07-52_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Придворный музыкант</i> (Хаос, пассивно) – каждый день все игроки могут тайно проголосовать за цвет способности. В следующую ночь вы можете применять способности только этого цвета. В случае ничьей, но не если голосов не было совсем, можете применять способности любого цвета из набравших больше всего голосов. Голоса вскрываются публично в конце дня. В начале игры раскрывается текст этой способности, но не чья она.
+</p>
+
+<p>
+<i>Воспоминание о прошлом</i> (Информация) – ночью можете выбрать цель; узнайте, способности каких цветов она играла в прошлую ночь. Серенада (Информация) – также узнайте, на кого.
+</p>
+
+<p>
+<i>Музыкальный слух</i> (Информация) – ночью можете выбрать цель; узнайте, способности каких цветов она играет в эту ночь. Серенада (Информация) – также узнайте, на кого.
+</p>
+
+<p>
+<i>Очаровать музыкой</i> (Контроль) – ночью можете выбрать цель. Аккорд (Агрессия, Агрессия, Агрессия) – заблокируйте цель. Аккорд (Контроль, Контроль, Контроль) – цель не может быть заблокирована в эту ночь. Нельзя применять на одну и ту же цель дважды.
+</p>
+
+<p>
+<i>Растопить сердце</i> (Контроль) – ночью можете выбрать цель. Серенада (Агрессия) – заблокируйте цель, и в следующую ночь цель заведомо не может применять способности цвета Агрессии. Нельзя применять дважды на одну и ту же цель.
+</p>
+
+<p>
+<i>За любимой</i> (Защита) – ночью можете выбрать цель. Если она должна умереть в эту ночь, то она живет еще сутки и умирает по итогам следующей ночи. Нельзя применять дважды на одну и ту же цель.
+</p>
+
+<p>
+<i>Следуй за мной</i> (Защита) – ночью можете выбрать цель. Если кто-то другой защищает вас от атак в эту ночь, то защитите цель от всех атак. Нельзя применять дважды на одну и ту же цель.
+</p>
+
+<p>
+<i>Обернуться</i> (Агрессия) – ночью атакуйте цель.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61d66f0" class="outline-3">
+<h3 id="org61d66f0">Закон – Psychotic – Какофоникс из “Asterix”</h3>
+<div class="outline-text-3" id="text-org61d66f0">
+
+<div id="org45de30a" class="figure">
+<p><img src="Players/2025-01-28_22-08-52_screenshot.png" alt="2025-01-28_22-08-52_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+
+<p>
+<i>Сыграть на пиру</i> (Контроль) – ночью можете выбрать чат-комнату, в которой находитесь. Заблокируйте всех остальных ее участников и покиньте комнату.
+</p>
+
+<p>
+<i>Контрвыступление</i> (Контроль) – ночью можете выбрать цель. Если у нее должен сработать Аккорд в эту ночь, заблокируйте ее. Нельзя применять на одну и ту же цель дважды.
+</p>
+
+<p>
+<i>Плохой слух</i> (Контроль) – ночью, вдобавок к любой другой способности, можете выбрать цель и цвет. Все сыгранные в эту ночь способности цели считаются выбранного цвета вместо настоящего. Узнайте случайную из не-законных личин, кроме той, которая есть у цели.
+</p>
+
+<p>
+<i>Непрошенный лейтмотив</i> (Контроль) – ночью можете выбрать цель и цвет. С точки зрения Серенад считается, что цель сыграла этот и только этот цвет.
+</p>
+
+<p>
+<i>Запланировать концерт</i> (Агрессия) – днем можете выбрать цель; все узнают вас, выбранную цель и текст этой способности. В следующую ночь, если вы живы и не заблокированы, атакуйте цель.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0c64aa" class="outline-3">
+<h3 id="orge0c64aa">Закон – vizion – Noise Marine из “Warhammer 40000”</h3>
+<div class="outline-text-3" id="text-orge0c64aa">
+
+<div id="org76a7fbc" class="figure">
+<p><img src="Players/2025-01-28_22-09-46_screenshot.png" alt="2025-01-28_22-09-46_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>Силовая броня</i> (Защита, пассивно) – игнорируйте первую атаку Мафии или Якудзы по себе за игру.
+</p>
+
+<p>
+<i>Sonic Blaster</i> (Агрессия) – ночью выберите цель и цвет. Серенада ([выбранный цвет]) – атакуйте цель.
+</p>
+
+<p>
+<i>Blastmaster</i> (Агрессия) – один раз за игру ночью, не раньше пятой, выберите цвет. Аккорд (Агрессия, Защита, Информация, Контроль) – атакуйте всех, кто сыграл способность этого цвета.
+</p>
+
+<p>
+<i>Warp Amplifier</i> (Агрессия) – ночью выберите цель. Ее атаки не срабатывают. Соло – в следующую ночь ее атаки тоже не срабатывают. Нельзя применять дважды на одну и ту же цель.
+</p>
+
+<p>
+<i>Doom Siren</i> (Агрессия) – ночью выберите цель. Если она атакует вас, игнорируйте все ее атаки и атакуйте ее в ответ. Нельзя применить дважды на одну и ту же цель.
+</p>
+
+<p>
+<i>Sonic Shrieker</i> (Агрессия) – ночью выберите цель. Соло – атакуйте ее трижды.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb5640d0" class="outline-3">
+<h3 id="orgb5640d0">Нейтрал – Alaron – Джонни Сильверхэнд из “Cyberpunk 2077”</h3>
+<div class="outline-text-3" id="text-orgb5640d0">
+
+<div id="orgec2fbd8" class="figure">
+<p><img src="Players/2025-01-28_22-10-42_screenshot.png" alt="2025-01-28_22-10-42_screenshot.png" height="300px" width="auto" />
+</p>
+</div>
+
+<p>
+<i>План теракта</i> (Информация) – днем выберите три цели и добавьте вместе с собой в чат Теракта. Все члены чата заведомо имеют способность “Цель теракта (Агрессия) – ночью вдобавок к любой другой способности можете выбрать цель. Эту способность нельзя заблокировать”. Нельзя применять, если чат Теракта уже существует.
+</p>
+
+<p>
+<i>Исполнение теракта</i> (Агрессия, пассивно) – если все члены чата Теракта применили Цель теракта на одну и ту же цель, кроме вас, все члены Теракта атакуют цель, и чат Теракта уничтожается.
+</p>
+
+<p>
+<i>Отзыв теракта</i> (Защита, пассивно) – если ночью никто не играет Цель теракта, чат Теракта уничтожается.
+</p>
+
+<p>
+<i>Провал теракта</i> (Агрессия, пассивно) – если все члены чата Теракта применили Цель теракта на разные цели, все члены Теракта атакуют вас, и чат Теракта уничтожается.
+</p>
+
+<p>
+<i>Анархист</i> (Контроль) – ночью можете выбрать цель. Если ее личина – Закон, узнайте об этом и заблокируйте ее. Нельзя применять дважды на одну и ту же цель. Можно применять, будучи мертвым, но не на цель Энграммы.
+</p>
+
+<p>
+<i>Энграмма</i> (Защита, пассивно) – в следующую фазу после смерти вы должны выбрать цель; узнайте ее сторону, роль и все способности роли; личина этой цели становится Нейтрал; цвета всех сыгранных ей способностей считаются Хаосом. Если она выигрывает, пока жива, вы выигрываете вместо нее. Пока цель Энграммы жива, вы можете продолжать общаться публично или в чатах, в которых были в момент смерти.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d192c3" class="outline-2">
+<h2 id="org3d192c3">Ход игры</h2>
+<div class="outline-text-2" id="text-org3d192c3">
+</div>
+<div id="outline-container-orgd81d55b" class="outline-3">
+<h3 id="orgd81d55b">День 1</h3>
+<div class="outline-text-3" id="text-orgd81d55b">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Игрок</td>
+<td class="org-left">Голос (Казнь)</td>
+<td class="org-left">Голос (Цвет)</td>
+<td class="org-left">Действие</td>
+</tr>
+
+<tr>
+<td class="org-left">Cvi_</td>
+<td class="org-left">Мир</td>
+<td class="org-left">Информация</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Nekr0</td>
+<td class="org-left">Cornix</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Фандом: ISOLE, Psychotic, Mr Fiks, Cvi_, Shy, Джакка</td>
+</tr>
+
+<tr>
+<td class="org-left">Destiny</td>
+<td class="org-left">Cornix</td>
+<td class="org-left">Информация</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Mr Fiks</td>
+<td class="org-left">VanSLis</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Биться об заклад – Cornix, VanSLis</td>
+</tr>
+
+<tr>
+<td class="org-left">Джакка</td>
+<td class="org-left">VanSLis</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Хор сирен – Nekr0, Alaron; Дирижер – Темп</td>
+</tr>
+
+<tr>
+<td class="org-left">VanSLis</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Защита</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Psychotic</td>
+<td class="org-left">vision</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Ингероид</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Не уследил – Destiny</td>
+</tr>
+
+<tr>
+<td class="org-left">Siiiiiid1</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Большая идея</td>
+</tr>
+
+<tr>
+<td class="org-left">Shy</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Project DIVA – 4</td>
+</tr>
+
+<tr>
+<td class="org-left">Nikita</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">ISOLE</td>
+<td class="org-left">Nikita</td>
+<td class="org-left">Защита</td>
+<td class="org-left">Большая идея</td>
+</tr>
+
+<tr>
+<td class="org-left">Alaron</td>
+<td class="org-left">Мир</td>
+<td class="org-left">Информация</td>
+<td class="org-left">План теракта – Mr Fiks, Cvi_, Ингероид</td>
+</tr>
+
+<tr>
+<td class="org-left">vision</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Cornix</td>
+<td class="org-left">Мир</td>
+<td class="org-left">Информация</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Традиционный первый день, где Котя хочет вешать, а остальные не хотят. Половина состава читают правила невнимательно; хорошо, что есть первый день, в который можно подразобраться.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8d5cf5" class="outline-3">
+<h3 id="orgd8d5cf5">Ночь 1</h3>
+<div class="outline-text-3" id="text-orgd8d5cf5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Игрок</th>
+<th scope="col" class="org-left">Действие</th>
+<th scope="col" class="org-left">Цвет</th>
+<th scope="col" class="org-left">Результат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Alaron</td>
+<td class="org-left">Анархист - Psychotic</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">“Личина – Закон”</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Psychotic заблокирована</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Ingeroid</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left"><i>теракт не успешен</i></td>
+</tr>
+
+<tr>
+<td class="org-left">VanSLis</td>
+<td class="org-left">Глаза-миньоны – Mr Fiks</td>
+<td class="org-left">Информация</td>
+<td class="org-left">“Личина – Мафия”</td>
+</tr>
+
+<tr>
+<td class="org-left">Cronix</td>
+<td class="org-left">Музыкальный слух – VanSLis</td>
+<td class="org-left">Информация</td>
+<td class="org-left">“Информация на Фикса”</td>
+</tr>
+
+<tr>
+<td class="org-left">ISOLE</td>
+<td class="org-left">Частное детективное агентство – Cvi_</td>
+<td class="org-left">Информация</td>
+<td class="org-left">“Аккорд не сработал”</td>
+</tr>
+
+<tr>
+<td class="org-left">Nikita</td>
+<td class="org-left">Песня о любви – Shy</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Shy заблокирован</td>
+</tr>
+
+<tr>
+<td class="org-left">Shy</td>
+<td class="org-left"><del>□ – Nekr0</del></td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">“Вы были заблокированы”</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><del>→</del></td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Все ноты невовремя</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><del>↓</del></td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Счет – 0%</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><del>X – Psychotic</del></td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Siiiiid1</td>
+<td class="org-left">Тайное общество:</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Аккорд не сработал</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Siiiiid1</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– ISOLE</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Mr Fiks</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Джакка</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Nekr0</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– vision</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Cvi_</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Ингероид</td>
+<td class="org-left"><del>С бабою встречались:</del></td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Заблокирован Destiny</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><del>– Nekr0</del></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><del>– Cvi_</del></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><del>– Psychotic</del></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Psychotic</td>
+<td class="org-left"><del>Плохой слух – Destiny, защита</del></td>
+<td class="org-left">Контроль</td>
+<td class="org-left">“Вы были заблокированы”</td>
+</tr>
+
+<tr>
+<td class="org-left">Cvi_</td>
+<td class="org-left">I AM THE MIC ENFORCER! (Хаос) – Пси</td>
+<td class="org-left">Хаос</td>
+<td class="org-left"><i>мимо</i></td>
+</tr>
+
+<tr>
+<td class="org-left">Джакка</td>
+<td class="org-left">Микрофон – ISOLE</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Сообщение ISOLE<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup></td>
+</tr>
+
+<tr>
+<td class="org-left">Mr Fiks</td>
+<td class="org-left">Пустить в пляс – Shy, Информация, Защита</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Destiny</td>
+<td class="org-left">Очная ставка</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Блок Ингера</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Серенада (Контроль)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Да</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Аккорд (Информация, Информация, Информация, Информация)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Да</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Аккорд (Контроль, Контроль, Контроль, Контроль)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Да</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Соло</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Нет</td>
+</tr>
+
+<tr>
+<td class="org-left">Nekr0</td>
+<td class="org-left">Любовь? – Cvi_</td>
+<td class="org-left">Информация</td>
+<td class="org-left">“Не мафия”</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Фандом – Mr Fiks, Cvi_, Джакка, ISOLE, vision, Nikita</td>
+<td class="org-left">Информация</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Большие идеи Финеса и Ферба не сработали – оба сделали ставку на Защиту, но ее никто не играл – потому что в первую ночь никто и не может быть атакован! Было предположение, что раз маскировочные способности обычно окрашены в Защиту, то кто-то да сыграет маскировку, но, увы, именно активных маскировочных способностей, имеющих смысл для игры в первую ночь, не было.
+</p>
+
+<p>
+Аларон заблокировал Пси и узнал, что она Закон. Ну, точнее, должен был узнать – здесь был мастерский косяк, и информация не доехала. Прости меня, Котя, да, я запорола тебе игру 🙇‍♀️. При том, если бы блока Пси не было, то это <i>сильно</i> изменило бы дальнейший курс игры – потому что это окрасило бы атаку Дестини в Защиту, и Аккорды Финеса и Ферба сработали бы! Этот один ход от Нейтрала затруднил игру Закону и Якудзе.
+</p>
+
+<p>
+Лис первым же скаутом успешно попал по Мафии! К сожалению, связаться с ними он уже не успеет…
+</p>
+
+<p>
+Никита блокирует Шая, а Фикс ограничивает ему палитру на следующую ночь. Шаю это сбивает все ноты, и составляет счет 0%, отчего он сразу сдается и считает, что ему не выиграть. Хотя на самом деле Мику находилась в почти идеальной для нее ситуации и могла бы запросто выйти в положительный счет и при этом сильно помочь закону, просто Шай не очень сообразил, как совладать с ее механиками. Я подбодрила, как могла…
+</p>
+
+<p>
+Destiny догадалась, что раз в первую ночь смертей нет, она может атаковать своего соратника по Мафии, просто чтобы получить одну техническую победу из семи необходимых для “ульты”. Немного перестаралась – попала в три движения из четырех и заблокировала Ингера – но это ни на что в итоге не повлияло, потому что Ингер и так не попал своей способностью.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9221b9c" class="outline-3">
+<h3 id="org9221b9c">День 2</h3>
+<div class="outline-text-3" id="text-org9221b9c">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Игрок</td>
+<td class="org-left">Голос (Казнь)</td>
+<td class="org-left">Голос (Цвет)</td>
+<td class="org-left">Действие</td>
+</tr>
+
+<tr>
+<td class="org-left">Cvi_</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">TURN UP THE VOLUME!</td>
+</tr>
+
+<tr>
+<td class="org-left">Nekr0</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Destiny</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Защита</td>
+<td class="org-left">Battle of the Bands – VanSLis</td>
+</tr>
+
+<tr>
+<td class="org-left">Mr Fiks</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Биться об заклад – Джакка, Psychotic</td>
+</tr>
+
+<tr>
+<td class="org-left">Джакка</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Хор Сирен – ISOLE; Темп</td>
+</tr>
+
+<tr>
+<td class="org-left">VanSLis</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Защита</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Alaron</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Запланировать концерт – Mr Fiks</td>
+</tr>
+
+<tr>
+<td class="org-left">Ингероид</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Они не понимали – VanSLis</td>
+</tr>
+
+<tr>
+<td class="org-left">Siiiiiid1</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Shy</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Project DIVA – 5</td>
+</tr>
+
+<tr>
+<td class="org-left">Nikita</td>
+<td class="org-left">Shy</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">ISOLE</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Alaron</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Защита</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">vision</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Cornix</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Информация</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Игрок</th>
+<th scope="col" class="org-left">Голос (Казнь)</th>
+<th scope="col" class="org-left">Голос (Цвет)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Cvi_</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+</tr>
+
+<tr>
+<td class="org-left">Nekr0</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+</tr>
+
+<tr>
+<td class="org-left">Destiny</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Защита</td>
+</tr>
+
+<tr>
+<td class="org-left">Mr Fiks</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+</tr>
+
+<tr>
+<td class="org-left">Джакка</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+</tr>
+
+<tr>
+<td class="org-left">VanSLis</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Защита</td>
+</tr>
+
+<tr>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Alaron</td>
+<td class="org-left">Агрессия</td>
+</tr>
+
+<tr>
+<td class="org-left">Ингероид</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Siiiiiid1</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Shy</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Nikita</td>
+<td class="org-left">Shy</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">ISOLE</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+</tr>
+
+<tr>
+<td class="org-left">Alaron</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Защита</td>
+</tr>
+
+<tr>
+<td class="org-left">vision</td>
+<td class="org-left">Psychotic</td>
+<td class="org-left">Контроль</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Казнили Котю – из-за меня. Помимо косячной проверки Аларона, она еще и пропустила чат – потому что не заходит в Дискорд постоянно, а уведомление о том, что чат есть, пришло только туда. Она в этот день выдала немало базы, но ее, как всегда, никто не слушал. Ее повешение было более-менее неизбежно.
+</p>
+
+<p>
+Cvi применил свою коммуникационную ульту – общение продолжилось следующей ночью.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb22a5cb" class="outline-3">
+<h3 id="orgb22a5cb">Ночь 2</h3>
+<div class="outline-text-3" id="text-orgb22a5cb">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Игрок</th>
+<th scope="col" class="org-left">Действие</th>
+<th scope="col" class="org-left">Цвет</th>
+<th scope="col" class="org-left">Результат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Alaron</td>
+<td class="org-left">Анархист - Mr Fiks</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">“Личины Закона нет”</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Siiiiiiid1</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Теракт успешен</td>
+</tr>
+
+<tr>
+<td class="org-left">VanSLis</td>
+<td class="org-left">Портал – Mr Fiks</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Слишком поздно!</td>
+</tr>
+
+<tr>
+<td class="org-left">Cronix</td>
+<td class="org-left">Растопить сердце – Shy</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Shy заблокирован, в следующую ночь не может применять цвет Агрессии</td>
+</tr>
+
+<tr>
+<td class="org-left">ISOLE</td>
+<td class="org-left">Организация народного ополчения – vision</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">(ничего)</td>
+</tr>
+
+<tr>
+<td class="org-left">Nikita</td>
+<td class="org-left">Похищение – Shy</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Шай заблокирован. Личина Шая – Закон</td>
+</tr>
+
+<tr>
+<td class="org-left">Shy</td>
+<td class="org-left">□ – Destiny</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">(заблокирован)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">→</td>
+<td class="org-left">Агрессияx3</td>
+<td class="org-left">(заблокирован)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">↓</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">(заблокирован)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">x – Nikita</td>
+<td class="org-left">Агрессияx3</td>
+<td class="org-left">Атака -&gt; Никита</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">↑</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Siiiiid1</td>
+<td class="org-left">Ассассин из даркнета – Cvi_</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Cvi_ заблокирован и атакован</td>
+</tr>
+
+<tr>
+<td class="org-left">Ингероид</td>
+<td class="org-left">С бабою встречались:</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">“Снова ни одного попадания”</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Nikita</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Shy</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– ISOLE</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Siiiiiid1</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Cvi_</td>
+<td class="org-left">WE DANCE! (Агрессия) – ISOLE</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Заблокирован</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Siiiiiiid1</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Джакка</td>
+<td class="org-left">Микрофон – Destiny</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Сообщение destiny <sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></td>
+</tr>
+
+<tr>
+<td class="org-left">Mr Fiks</td>
+<td class="org-left">Пустить в пляс – Shy, Агрессия, Контроль</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Если Shy играет агрессию или контроль, то блокируется</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Siiiiiid1</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Убийство – ISOLE</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Атака в ISOLE</td>
+</tr>
+
+<tr>
+<td class="org-left">Destiny</td>
+<td class="org-left">Очная ставка</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Серенада (Информация)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">+</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Аккорд (Агрессия, Информация, Контроль, Защита)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">-  Атака прошла, но блока нет</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Аккорд (Контроль, Контроль, Контроль, Контроль)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">+</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Аккорд (Контроль, Контроль, Защита, Защита)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">Nekr0</td>
+<td class="org-left">Любовь? – Destiny</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Не предатель</td>
+</tr>
+
+<tr>
+<td class="org-left">vision</td>
+<td class="org-left">Sonic Blaster (Агрессия) – Destiny</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Destiny должна бы умереть, но выживает</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Пять трупов!
+</p>
+
+<ul class="org-ul">
+<li>Siiiid, якудза – убит Алароновским терактом.</li>
+<li>Никита – убит контратакой Шая, которому, видимо, не простил блокировку в первую ночь.</li>
+<li>VanSLis – убит Дестини на дуэли</li>
+<li>Cvi_ – убит ассасином Якудзы</li>
+<li>ISOLE – убит Убийством мафии</li>
+<li>БОНУС! Destiny – должна была быть убита Визионом, но выжила, благодаря 1-up</li>
+</ul>
+
+<p>
+Boom shaka-laka, что я могу сказать! Я ожидала на один-два меньше трупов в первую активную ночь, но ладно.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fc4a6e" class="outline-3">
+<h3 id="org3fc4a6e">День 3</h3>
+<div class="outline-text-3" id="text-org3fc4a6e">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Игрок</td>
+<td class="org-left">Голос (Казнь)</td>
+<td class="org-left">Голос (Цвет)</td>
+<td class="org-left">Действие</td>
+</tr>
+
+<tr>
+<td class="org-left">Nekr0</td>
+<td class="org-left">Shy</td>
+<td class="org-left">Защита</td>
+<td class="org-left">Фандом - визион, джакка, корникс, фикс</td>
+</tr>
+
+<tr>
+<td class="org-left">Destiny</td>
+<td class="org-left">Shy</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Battle of the Bands (Агрессия) –Джакка</td>
+</tr>
+
+<tr>
+<td class="org-left">Mr Fiks</td>
+<td class="org-left">Shy</td>
+<td class="org-left">Защита</td>
+<td class="org-left">Биться об заклад – Визион, Ингер</td>
+</tr>
+
+<tr>
+<td class="org-left">Джакка</td>
+<td class="org-left">Shy</td>
+<td class="org-left">Защита</td>
+<td class="org-left">Диминуэндо</td>
+</tr>
+
+<tr>
+<td class="org-left">Ингероид</td>
+<td class="org-left">Shy</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Не уследил – Джакка</td>
+</tr>
+
+<tr>
+<td class="org-left">Shy</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Project DIVA – 5</td>
+</tr>
+
+<tr>
+<td class="org-left">Alaron</td>
+<td class="org-left">Shy</td>
+<td class="org-left">Защита</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">vision</td>
+<td class="org-left">Destiny</td>
+<td class="org-left">Защита</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Cornix</td>
+<td class="org-left">Shy</td>
+<td class="org-left">Защита</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Казнили Шая за Шайство. После вскрытия его роли и стороны возникли массовые недовольства. В том числе, и с моей стороны:
+</p>
+
+<blockquote>
+<p>
+Эх, Шай, у тебя буквально была гарантия начать комбо.
+</p>
+
+<p>
+Это прям идеальный сценарий для Мику был. Ты знал, что тебя будут блокировать. ○︎↑□ было бы гарантированным 3/3, и ты бы при этом сделал одну защиту, одно сообщение и потенциально одну проверку роли – больше, чем многие. В следующую ночь комбо было бы активно, иммун к блокам, и ты опять же знал, что тебя будут пытаться блокировать, так что минимум три ноты у тебя было бы в кармане с гарантией, и еще две было бы несложно получить, выйдя на положительный счет и при этом сделав кучу пользы. Дальше уже по накатанной танцевать.
+</p>
+
+<p>
+Вот раньше когда я тебя убеждала, что не все потеряно, я имела ввиду это – Мику сидела на золоте. Сейчас, ну, я скажу, что "на золоте" Мику уже не сидит, но и поражение далеко не гарантировано, вытащить еще вполне возможности будут. Мику это механически сложный персонаж, чья высокая эффективность по количеству полезных действий в ход компенсируется необходимостью точно попадать в требования текущего момента, что есть самое близкое к опыту ритм-игры, что я могу придумать в рамках мафии. Пользуйся особенностями роли!
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orge347198" class="outline-3">
+<h3 id="orge347198">Ночь 3</h3>
+<div class="outline-text-3" id="text-orge347198">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Игрок</th>
+<th scope="col" class="org-left">Действие</th>
+<th scope="col" class="org-left">Цвет</th>
+<th scope="col" class="org-left">Результат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Alaron</td>
+<td class="org-left">Анархист - vision</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Личина – Закон; vision заблокирован</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Destiny</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Теракт удался</td>
+</tr>
+
+<tr>
+<td class="org-left">Cronix</td>
+<td class="org-left">За любимой – Destiny</td>
+<td class="org-left">Защита</td>
+<td class="org-left">…но Дестини от него не умерла</td>
+</tr>
+
+<tr>
+<td class="org-left">Ингероид</td>
+<td class="org-left">С бабою встречались:</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Alaron</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– Cornix</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">– vision</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">vision помечен</td>
+</tr>
+
+<tr>
+<td class="org-left">Джакка</td>
+<td class="org-left">Ближняя атака – Ингероид</td>
+<td class="org-left">Информация</td>
+<td class="org-left">Ингероид убит</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Destiny</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Mr Fiks</td>
+<td class="org-left">Морской царь – Alaron</td>
+<td class="org-left">Контроль</td>
+<td class="org-left">Alaron убит</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Destiny</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Убийство – Джакка</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Джакка убит</td>
+</tr>
+
+<tr>
+<td class="org-left">Destiny</td>
+<td class="org-left">Очная ставка</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Аккорд (Контроль, Контроль, Защита, Защита)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Соло</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Цель заблокирована в эту ночь кем-то, кроме вас</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Личина цели – Мафия</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">Nekr0</td>
+<td class="org-left">Любовь? – vision</td>
+<td class="org-left">Информация</td>
+<td class="org-left">“Не предатель”</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Цель теракта – Destiny</td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">vision</td>
+<td class="org-left"><del>Warp Aplifier – Ингероид</del></td>
+<td class="org-left">Агрессия</td>
+<td class="org-left">Блок, метка Якудзы, убит</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Вторая волна трупов. Защита сирен не сработала – морской царь оказался выше по рангу. И нейтрал начинает включать энграмму…
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0a5955" class="outline-3">
+<h3 id="orgc0a5955">День 3</h3>
+<div class="outline-text-3" id="text-orgc0a5955">
+<p>
+Эндшпиль.
+</p>
+
+<blockquote>
+<p>
+Сейчас расклад: две мафии, як и законник. И Аларон может выбрать цель энграммы.
+Яку и Законнику уже не выиграть. Аларону нужно пикнуть мафа.
+Если он пикнет мафа, то мафии для победы надо выяснить кто из них под энграммой, убить этого одного, а потом добить последнего противника. У них есть последовательность действий, которая поможет им это сделать с гарантией &#x2013; но догадаются ли они? Если не догадаются, то тот, кого пикнет Аларон, проиграет в пользу Аларона
+</p>
+</blockquote>
+
+<p>
+Аларон выбирает целью Энграммы Фикса.
+</p>
+
+<blockquote>
+<p>
+[01:30]Некро: Знаю!!!!
+</p>
+
+<p>
+[01:30]Некро: Мое соло
+</p>
+
+<p>
+[01:30]Некро: Играй свою абилку пир как агрессию.
+</p>
+
+<p>
+Я же своим соло ударю тебя ночью
+</p>
+
+<p>
+[01:30]Некро: Если твоя абилка будет цвета хаоса и сработает - ты умрешь
+</p>
+
+<p>
+[01:31]Некро: Если же хаоса не будет то днем казним меня да и всё
+</p>
+
+<p>
+[01:31]Некро: Главное казнить дестини
+</p>
+</blockquote>
+
+<p>
+Интересно, реализуется ли это так, как сказано?
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org54c0934" class="outline-3">
+<h3 id="org54c0934">Ночь 3</h3>
+<div class="outline-text-3" id="text-org54c0934">
+<p>
+Аларон играет Анархиста на Некро, что никак не влияет на ресолв (у Некро нет личины закона).
+</p>
+
+<p>
+Дестини выжила благодаря способности Корникса, которая позволяет ей прожить еще сутки после своей смерти прошлой ночью. Сутки она прожила, теперь она умирает.
+</p>
+
+<p>
+Корникс, который вместе с ней таки сумел протащить Агрессию на последнем голосовании, сейчас атакует Некро. Некро умирает.
+</p>
+
+<p>
+Некро атакует Корникса. Корникс умирает.
+</p>
+
+<p>
+Некро защищает Фикса. Дестини атакует Фикса, но не набирает достаточно движений  – Фикс выживает.
+</p>
+
+<p>
+Итого по итогам ночи жив только Фикс.
+</p>
+
+<p>
+&#x2026;оно абсолютно могло быть иначе, мафия могла бы выиграть в полном составе, если бы решила этот последний паззл, как я надеялась.
+</p>
+
+<p>
+&#x2026;или если бы Некро не защищал Фикса, могли бы умереть все, и внутреннюю, духовную победу получил бы Джакка.
+</p>
+
+<p>
+Но в реальном мире победили <b>Nekr0, VanSLis, Alaron</b>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3ff0f98" class="outline-2">
+<h2 id="org3ff0f98">Итоги</h2>
+<div class="outline-text-2" id="text-org3ff0f98">
+<p>
+Победили <b>Nekr0, VanSLis, Alaron</b> – каждому по принцессокоину.
+</p>
+
+<p>
+Проигрыш Закона был не вполне чистый, потому что ошибки ресолва были очень сильно против Закона (прости, Котя!), но увы, ошибки ресолва – как стихийное бедствие. Моральную победу можно присудить Закону (в особенн)
+</p>
+
+<p>
+Игра была быстрее, чем я ожидала. Я планировала много трупов, но не <i>настолько</i> много! Тем не менее, получилось.
+</p>
+</div>
+
+<div id="outline-container-org4d570a5" class="outline-3">
+<h3 id="org4d570a5">Ачивки</h3>
+<div class="outline-text-3" id="text-org4d570a5">
+<p>
+<b>Destiny</b> – <i>Выживальщик</i>
+</p>
+
+<p>
+Триджы выжила, когда должна была умереть
+</p>
+
+<p>
+<b>VanSLis</b> - <i>Связи в криминальном мире</i>
+</p>
+
+<p>
+Первой же попыткой поиска Мафии попал в цель
+</p>
+
+<p>
+<b>Mr Fiks</b> – <i>Alexander wept</i>
+</p>
+
+<p>
+Остался единственным выжившим, но все равно проиграл
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+"Слушай песнь Хора! Слушай лидера Хора! Верь лидеру Хора! Лидер Хора - Закон! Лидер Хора не знает, кто поёт у него в Хоре, но вдохновляет и укрепляет дух&#x2026;"
+</p>
+
+<p class="footpara">
+В общем, это Джакка. Я подготовил целую пафосную тираду, расписывающую, как работает моя способность, но сейчас мне нужен не столько пруф ночного действия на будущее, сколько предупредить тебя. Некро собирается пересоздать чат с иным набором участников; тебя выкинуло, потому что ты, с одной стороны, выглядишь Законом, а с другой, рассказываешь о своих способностях довольно многое, и они требуют максимальной координации с другим Законом, чтобы быть активными. Поэтому по итогам дня тебя добавит в другой чат, чат Хора, в котором сейчас находимся я сам, Некро и Аларон. Предварительно - есть высокая вероятность, что мы трое Закон, и подтверждено, что мы все трое умеем создавать чаты. Я сам могу усиливать и защищать тех, кто в чате Хора, и уже продемонстрировал одну из "заведомо" усиливающих способностей этой ночью, но подробнее расскажу уже собственно в чате.
+</p>
+
+<p class="footpara">
+Так что тебя выкинуло не потому, что тебе не верят, а потому что чат Некро предполагается использовать как фильтр для определения потенциального Закона, и по итогам дня ты будешь добавлена в чат, где людей меньше, а уровень доверия выше.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Слушай песнь Хора! Слушай лидера Хора! Верь лидеру Хора! Лидер Хора - Закон! Лидер Хора не может читать истину в сердцах тех, кто поёт в его Хоре, но вдохновляет и укрепляет их дух во всех испытаниях!
+</p>
+
+<p class="footpara">
+В первую ночь Хор пел песнь спешки, и все знали, что могут действовать дважды! Лидер Хора полностью открыл свои силы тем, кто пел с ним, Некро и Аларону, они оба поверили ему, и лидер Хора поверил им в ответ, хоть и говорили о себе они немногое! Проверено: кроме лидера Хора, о том, о том, что Аларон собрался прочесть сердце Пси, знал лишь Некро!
+</p>
+
+<p class="footpara">
+В ночь вторую в Хор вступила Изоль, дева, доверия предположительно достойная, и Хор тихо пел песнь отваги, что не позволила бы никому помешать его членам действовать, заблокировать их.
+</p>
+
+<p class="footpara">
+Если ты Закон, если ты слышишь лидера Хора, если ты хочешь петь в Хоре и можешь твёрдо доказать свою преданность Закону - напиши в первом своём сообщении дня слово "могу". Если ты Закон, хочешь петь в Хоре, но не знаешь, как проявить себя - пусть меж слов оного сообщения появится слово "думаю". Если ты не веришь лидеру Хора, но желаешь знать больше - напиши "хочу".
+</p>
+
+<p class="footpara">
+Верь лидеру Хора! Лидер Хора - Закон!
+</p>
+
+<p class="footpara">
+(&#x2026;а ещё ты можешь запросто узнать, кто же этот таинственный лидер, просто спросив о том Некро, Аларона или Изоль, но лидер Хора очень просит тебя не делать этого в открытую.)
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Created: 2025-02-07 Fri 09:49</p>
+</div>
+</body>
+</html>
